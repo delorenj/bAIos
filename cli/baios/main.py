@@ -13,7 +13,7 @@ from rich.table import Table
 from rich import print as rprint
 
 from . import __version__
-from .commands import check
+from .commands import check, agent
 
 # Initialize Typer app and Rich console
 app = typer.Typer(
@@ -26,6 +26,7 @@ console = Console()
 
 # Add subcommands
 app.add_typer(check.app, name="check", help="🔍 System and workspace checks")
+app.add_typer(agent.app, name="agent", help="🤖 Interact with specialized AI agents")
 
 
 @app.callback()
