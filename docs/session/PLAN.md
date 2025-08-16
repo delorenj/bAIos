@@ -2,7 +2,7 @@
 
 **IMPORTANT**: Don't work too far ahead without regularly demonstrating progress. There will be a number of prescribed check-in points where you will be asked to demonstrate some specific functionality or progress.
 
-## Checkpoint 1
+- [x] Checkpoint 1
 
 A typer CLI app is executed: `baios check`
 
@@ -14,7 +14,7 @@ It prints out a list of of all the items in the inventory file, with a status fo
 - Not Started (Required): This means it has not been started yet, but it is required for the session to be complete.
 - Note: This means it is not required for the session to be complete, but it is a note for the user.
 
-## Checkpoint 2
+- [x] Checkpoint 2
 
 A typer CLI app is executed: `baios agent list`
 
@@ -32,6 +32,18 @@ baios agent ask Shelldon "Is zsh my default shell?"
 
 Shelldon: Yes, zsh is your default shell.
 ```
+
+- [ ] Checkpoint 3
+
+We're gonna pause for this checkpoint to make sure we're on the same page in terms of our GDK agents. We need to ensure we build a solid base agent that can be extended to become the agents in this system. We should show the agent has the capability to interact with the filesystem by, let's say, writing a simple script or something in response to a cli `ask` query
+
+- [ ] Checkpoint 4
+
+There is now a complete list of agents that are available, and they are all working correctly. The agents are able to communicate with each other and with the coordinator agent. The coordinator agent is able to manage the overall process and ensure that everything is done in the correct order.
+
+Every task is now associated with one and only one agent
+
+The coordinator agent now have each step registered in the correct order dictated by the dependency graph
 
 ## Instructions
 

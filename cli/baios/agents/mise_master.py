@@ -30,7 +30,7 @@ class MiseMaster(Agent):
             personality="Precise, methodical, and environment-focused. Knows exactly how to set up the perfect development environment."
         )
     
-    def ask(self, question: str) -> str:
+    def handle_question(self, question: str) -> str:
         """
         Answer mise-related questions and provide guidance.
         

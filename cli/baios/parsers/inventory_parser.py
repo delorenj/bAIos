@@ -405,7 +405,7 @@ class InventoryParser:
         # Create sample report
         report = InventoryReport(
             sections=[wsl_section],
-            env_keys=["GITHUB_PERSONAL_ACCESS_TOKEN", "OPENROUTER_API_KEY"],
+            env_keys=["GITHUB_PERSONAL_ACCESS_TOKEN", "OPENROUTER_API_KEY", "REPO_PATH", "NERD_FONT"],
             generated_at=datetime.now().isoformat(),
             metadata={
                 "source": "sample_data",

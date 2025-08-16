@@ -29,7 +29,7 @@ class BillTheCoordinator(Agent):
             personality="Professional, organized, and strategic. Thinks in terms of dependencies, priorities, and efficient workflows."
         )
     
-    def ask(self, question: str) -> str:
+    def handle_question(self, question: str) -> str:
         """
         Answer coordination and orchestration questions.
         

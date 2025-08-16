@@ -29,7 +29,7 @@ class TzviTheWindowsWizard(Agent):
             personality="Enthusiastic about Windows development, detail-oriented, and always knows the Windows way to do things."
         )
     
-    def ask(self, question: str) -> str:
+    def handle_question(self, question: str) -> str:
         """
         Answer Windows-specific questions and provide guidance.
         
