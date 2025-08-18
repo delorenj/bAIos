@@ -1,0 +1,32 @@
+tasks:
+  # Phase 5: AI Development Tools
+  - id: claude_code_install
+    description: Install Claude Code
+    dependencies:
+      - nodejs_install
+    check_command: claude-code --version
+    install_command: npm install -g claude-code
+  - id: claude_auth
+    description: Claude Authentication
+    dependencies:
+      - claude_code_install
+    check_command: claude-code auth status
+    install_command: claude-code auth login
+  - id: claude_flow_install
+    description: Install Claude Flow
+    dependencies:
+      - nodejs_install
+    check_command: claude-flow --version
+    install_command: npm install -g claude-flow
+  - id: gptme_install
+    description: Install GPTme
+    dependencies:
+      - pipx_install
+    check_command: gptme --version
+    install_command: pipx install 'gptme[all]'
+  - id: gptme_rag_install
+    description: Install GPTme RAG
+    dependencies:
+      - pipx_install
+    check_command: gptme-rag --version
+    install_command: pipx install gptme-rag

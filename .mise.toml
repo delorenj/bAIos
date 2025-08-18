@@ -1,0 +1,50 @@
+# bAIos Project Configuration
+# FastAPI Full-Stack Template with Claude Flow AI Integration
+
+[tools]
+node = "20"
+python = "3.11"
+
+[env]
+# Project identification
+PROJECT_NAME = "bAIos"
+STACK_NAME = "baios-stack"
+
+# Development environment
+NODE_ENV = "development"
+ENVIRONMENT = "local"
+
+# Claude Flow configuration
+CLAUDE_FLOW_PORT = "8080"
+CLAUDE_FLOW_HOST = "0.0.0.0"
+
+[tasks.dev]
+description = "Start development environment"
+run = "docker-compose up -d"
+
+[tasks.build]
+description = "Build all services"
+run = "./scripts/build.sh"
+
+[tasks.test]
+description = "Run tests"
+run = "./scripts/test.sh"
+
+[tasks.deploy]
+description = "Deploy to production"
+run = "./scripts/deploy.sh"
+
+[tasks.generate-client]
+description = "Generate frontend client from OpenAPI"
+run = "./scripts/generate-client.sh"
+
+[tasks.claude-flow]
+description = "Start Claude Flow CLI"
+run = "./claude-flow"
+
+[tasks.setup]
+description = "Initial project setup"
+run = [
+    "npm install",
+    "echo 'Project setup complete. Run mise systemd:install to install the systemd service.'"
+]

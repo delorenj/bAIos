@@ -1,0 +1,26 @@
+tasks:
+  # Phase 2: Core Shell
+  - id: zsh_install
+    description: Install Zsh Shell
+    dependencies:
+      - apt_update
+    check_command: zsh --version
+    install_command: sudo apt install zsh -y
+  - id: zsh_default
+    description: Set Zsh as Default Shell
+    dependencies:
+      - zsh_install
+    check_command: echo $SHELL | grep zsh
+    install_command: chsh -s $(which zsh)
+  - id: oh_my_zsh
+    description: Install Oh My Zsh framework for zsh configuration
+    dependencies:
+      - zsh_default
+    check_command: test -d $HOME/.oh-my-zsh
+    install_command: 'sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"'
+  - id: curl_install
+    description: Install Curl
+    dependencies:
+      - apt_update
+    check_command: curl --version
+    install_command: sudo apt install curl -y

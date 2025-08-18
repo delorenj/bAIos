@@ -1,0 +1,57 @@
+# Systemd Service Management Tasks for Claude Flow
+# Domain: systemd
+
+[tasks.install]
+description = "Install Claude Flow systemd service"
+run = "sudo ./systemd/install-service.sh"
+dir = "{{config_root}}"
+
+[tasks.status]
+description = "Show Claude Flow service status"
+run = "./systemd/manage-service.sh status"
+dir = "{{config_root}}"
+
+[tasks.start]
+description = "Start Claude Flow service"
+run = "./systemd/manage-service.sh start"
+dir = "{{config_root}}"
+
+[tasks.stop]
+description = "Stop Claude Flow service"
+run = "./systemd/manage-service.sh stop"
+dir = "{{config_root}}"
+
+[tasks.restart]
+description = "Restart Claude Flow service"
+run = "./systemd/manage-service.sh restart"
+dir = "{{config_root}}"
+
+[tasks.logs]
+description = "Follow Claude Flow service logs"
+run = "./systemd/manage-service.sh logs"
+dir = "{{config_root}}"
+
+[tasks.logs-tail]
+description = "Show last 50 lines of Claude Flow service logs"
+run = "./systemd/manage-service.sh logs-tail"
+dir = "{{config_root}}"
+
+[tasks.enable]
+description = "Enable Claude Flow service (auto-start on boot)"
+run = "./systemd/manage-service.sh enable"
+dir = "{{config_root}}"
+
+[tasks.disable]
+description = "Disable Claude Flow service"
+run = "./systemd/manage-service.sh disable"
+dir = "{{config_root}}"
+
+[tasks.health]
+description = "Check Claude Flow service health"
+run = "./systemd/manage-service.sh health"
+dir = "{{config_root}}"
+
+[tasks.uninstall]
+description = "Uninstall Claude Flow systemd service"
+run = "sudo ./systemd/manage-service.sh uninstall"
+dir = "{{config_root}}"
